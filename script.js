@@ -24,37 +24,45 @@ function getHumanChoice() {
 
 function playRound(humanChoice, computerChoice) {
     humanChoice = humanChoice.toLowerCase();
+    let result = "";
 
     if (humanChoice === computerChoice) {
-        console.log("It's a tie!");
+        result = "It's a tie!";
     } else if (
         (humanChoice === "rock" && computerChoice === "scissors") ||
         (humanChoice === "scissors" && computerChoice === "paper") ||
         (humanChoice === "paper" && computerChoice === "rock")
     ) {
         humanScore++;
-        console.log(`You win! ${humanChoice} beats ${computerChoice}`);
+        result = `You win! ${humanChoice} beats ${computerChoice}`;
     } else {
         computerScore++;
-        console.log(`You lose! ${computerChoice} beats ${humanChoice}`);
+        result = `You lose! ${computerChoice} beats ${humanChoice}`;
     }
+
+    result += `\n\nCurrent score - You: ${humanScore}, Computer: ${computerScore}`;
+    return result; //return the result to the playGame function 
 }
 
 function playGame(roundNumber) {
-    if (roundNumber === 5) {
+    if (roundNumber > 5) {
+        let finalResult;
         if (humanScore > computerScore) {
-            console.log("You are the winner!");
+            finalResult = `You are the winner!\nFinal score - You: ${humanScore}, Computer: ${computerScore}`;
         } else if (computerScore > humanScore) {
-            console.log("The computer is the winner!");
+            finalResult = `The computer is the winner!\nFinal score - You: ${humanScore}, Computer: ${computerScore}`;
         } else {
-            console.log("The game is a tie overall!");
+            finalResult = `The game is a tie overall!\nFinal score - You: ${humanScore}, Computer: ${computerScore}`;
         }
+        alert(finalResult);  // Show final result and scores
         return;
     }
 
     const humanSelection = getHumanChoice();
     const computerSelection = getComputerChoice();
-    playRound(humanSelection, computerSelection);
+    const roundResult = playRound(humanSelection, computerSelection);
+
+    alert(roundResult);  // Show result of the round and scores
 
     playGame(roundNumber + 1); 
 }
