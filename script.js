@@ -54,7 +54,7 @@ const playRound = function (round) {
 
 const playGame = function () {
   for (let i = 1; i < 6; i++) {
-    let rounds = playRound([i]);
+    playRound([i]);
   }
   if (playerScore > computerScore) {
     console.log(
