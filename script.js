@@ -71,4 +71,4 @@ const playGame = function () {
   }
 };
 
-playGame(1);
+playGame();
