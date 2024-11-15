@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock,Paper and Scissors</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-container">
+      <h1>Rock, paper and scissors!</h1>
+      <div class="buttons">
+        <div class="button-item">
+          <img src="rock.png" alt="rock" class="game-image" />
+          <button class="game-button rock">Rock</button>
+        </div>
+        <div class="button-item">
+          <img src="paper.png" alt="paper" class="game-image" />
+          <button class="game-button paper">Paper</button>
+        </div>
+        <div class="button-item">
+          <img src="scissors.png" alt="scissors" class="game-image" />
+          <button class="game-button scissors">Scissors</button>
+        </div>
+      </div>
+
+      <div class="info">
+        <div class="result">Result:</div>
+        <div class="score">Score:</div>
+        <div class="winner">Winner:</div>
+        <button class="game-button reset">
+          Play again <span class="emoji">🥹</span>
+        </button>
+      </div>
+    </div>
+
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

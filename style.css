@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  margin-bottom: 150px;
+  font-size: 3em;
+  color: black;
+  text-shadow: 3px 3px 8px #14a617;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 50px;
+}
+
+.button-item {
+  width: 120px;
+}
+
+.game-image {
+  width: 120px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.game-button {
+  padding: 15px 15px;
+  font-size: 1.2em;
+  cursor: pointer;
+  border: none;
+  background-color: black;
+  color: #fff;
+  border-radius: 5px;
+  width: 100%;
+}
+
+.game-button:hover {
+  box-shadow: 0 0 10px 3px #14a617;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+  text-align: center;
+  font-family: Arial;
+}
+
+.winner-highlight {
+  color: green;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.game-button.reset {
+  margin-top: 10px;
+  font-size: 30px;
+  padding: 10px 10px;
+  width: auto;
+}
+
+.game-button.reset:hover {
+  box-shadow: 0 0 10px 3px #c11010;
+}
+
+.emoji {
+  font-size: 25px;
+}
